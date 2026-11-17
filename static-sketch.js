@@ -11,17 +11,17 @@
 
 // 1. 固定的 5 色调色板：米白底、深灰、朱红、青蓝、明黄
 const PALETTE = {
-  background: 244, 241, 234, // 米白
-  dark: [43, 43, 43],        // 深灰
-  red: [228, 87, 46],        // 朱红
-  teal: [23, 190, 187],      // 青蓝
-  yellow: [255, 201, 20]     // 明黄
+  background: [244, 241, 234], // 米白
+  dark: [43, 43, 43],          // 深灰
+  red: [228, 87, 46],          // 朱红
+  teal: [23, 190, 187],        // 青蓝
+  yellow: [255, 201, 20]       // 明黄
 };
 
 function setup() {
   createCanvas(380, 570);
   noStroke();
-  background(PALETTE.background);
+  background(...PALETTE.background);
 
   const cellSize = 62;   // 网格间距（像素）
   const margin = 30;     // 页边距（像素）
